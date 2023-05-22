@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: no;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background-color: transparent;
+}
+body{
+    background: rgb(12, 189, 91);
+    /* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+    div.example {
+      display: none;
+    }
+  }
+}
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+.main-menu{
+    display: flex;
+}
+.main-menu a{
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+.main-menu a:hover{
+    border-bottom: 2px solid white;
+}
+button {
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+    color: #000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    list-style: none;
+    width: 75%;
+
+  }
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+body{
+    margin: 0px;
+    align-items: stretch;
+}
+.page-body{
+    display: flex;
+    height: 35rem;
+    background: white;}
+.right{
+    list-style: none;
+    width: 25%;
+    background-color: rgb(12, 189, 91);
+    height: 100%;
+    align-items: center;
+    padding-top: 3rem;
+    padding-left: 5px;
+    height: 100%;
+    
+}
+.content{
+    width: 75%;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.user-info h3{
+    font-weight: 500;
+    font-size: 15px;
+}
+form{
+    width: 500px;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    background-color: rgb(136, 228, 133) ;
+    margin-left: 20%;
+}
+.form-control{
+    display: flex;
+    flex-direction:column;
+    margin: 1.5rem 0;
+    top: 50%;
+    right: 50%;
+    background-color:  rgb(136, 228, 133) ;
+}
+input{
+    padding: 10px 0 ;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border: 0;
+    border-bottom: 2px solid rgb(9, 151, 4);
+    background-color: transparent;
+    outline: none;
+}
+input:placeholder-shown{
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.form-control label{
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 7px;
+}
+.notes{
+    width: 100%;
+    display: flex;
+    padding: 3rem 2rem 2rem 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.content{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 20rem 4rem 4rem;
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+.day {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+  
+h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+textarea{
+    width: 100%;
+    height: 80px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+}
+.weekdays{
+    display: flex;
+}
+
+.container{
+    margin: 100px;
+}
+
+.card{
+    background: rgb(136, 228, 133);
+    padding: 1rem 1.5rem 1rem;
+    width: 32rem;
+    margin: 5px 5px;
+}
+.card h3{
+    font-size: 1.9rem;
+    padding-bottom: 7px;
+    position: relative;
+    display: inline;
+}
+.card p{
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    padding: 1rem 0;
+}
+.card h3::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 6px;
+    left: 0;
+    background: rgb(180, 180, 0);
+}
+.page-button{
+    margin-left: 40px;
+}
