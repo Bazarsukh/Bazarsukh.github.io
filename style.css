@@ -1,47 +1,79 @@
-body{
-    background-color: #ffeecc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+	background-color: aliceblue;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
-#cellContainer{
-    position: relative;
-    background-color: #999999;
-    padding: 10px;
-    display: flex;
-    width: 280px;
-    flex-wrap: wrap;
-    border-radius: 5px;
 
-      .hourglass::after {
-        content: '⏳';
-        --emoji: '⌛️';
-        animation-name: twoFrames;
-        animation-duration: 1.2s;
-    }
+.heading {
+	font-family: 'Pacifico', cursive;
+	margin: 35px auto 20px;
 }
-.cell{
-    width: 50px;
-    height: 50px;
-    background-color: palevioletred;
-    margin: 10px;
-    border-radius: 5px;
-}
-.cube{
-    width: 50px;
-    height: 50px;
-    background-color: #ffcc00;
-    margin: 10px;
-    border-radius: 5px;
-    position: absolute;
-    left: 80px;
-    top: 150px;
-    color: #ffffff;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    transition: all 0.3 ease-in;}
 
+hr {
+
+}
+
+.main {
+	width: 50vw;
+	margin: auto;
+	padding: 30px;
+	border-radius: 2px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+label {
+	font-size: 12px;
+}
+
+.btn {
+	width: 200px;
+}
+
+#finalAmount {
+	font-family: 'Lobster', cursive;
+	display: none;
+	margin: 50px auto;
+}
+
+#finalAmount h2 {
+	font-size: 50px;
+}
+
+.finalValue {
+	font-family: 'Amiri', serif;
+}
+
+@media (max-width: 768px) {
+	hr {
+		width: 60%;
+	}
+
+	.main {
+		width: 100%;
+	}
+}
+
+@media (max-width: 400px) {
+	.heading {
+		font-size: 60px;
+	}
+
+	hr {
+		width: 75%;
+	}
+
+	#finalAmount h2,
+	.finalValue {
+		font-size: 40px;
+	}
+}
+.h1{
+	font-size: 20px;
+	width: 20%;
+	font-display: 10px;
+	
+	
+}

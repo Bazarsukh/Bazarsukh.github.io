@@ -55,7 +55,7 @@ section{
 }
 .content h1{
     font-family: 'Poppins',sans-serif;
-    font-size: 15px;
+    font-size: 60px;
     line-height: 1;
     color: gold;
     margin: 0 0 45px;
@@ -99,4 +99,60 @@ section{
 .image{
     right: 100%;
     animation: moveSheep 5s linear infinite;
+}
+header .btnLogin{
+    width: 110px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid;
+    outline: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 40px;
+    transition: 1s;
+}
+.btnLogin:hover {
+    background: #fff;
+    color:#2fd3aa ;
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border:2px solid rgba(255,255,255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+.form-box h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #2fd3aa;
+    margin: 30px 0;
+}
+.input-box label{
+    position:absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    pointer-events: none;
 }

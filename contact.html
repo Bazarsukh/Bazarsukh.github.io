@@ -1,61 +1,243 @@
-<div id="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>валютын
+        ханш хөрвүүлэгч</title>
+	<link rel="stylesheet"
+		href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+	</script>
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	</script>
 
-    <div class="content">
-    <h1>Your reaction?</h1>
-        
-    <div class="reaction">
-        <div class="emoji">😃</div>
-        <div class="count">52</div>
-        <div class="text">happy</div>
-    </div>
-    
-    <div class="reaction">
-        <div class="emoji">😂</div>
-        <div class="text">amused</div>
-        <div class="count">1361</div>
-    </div>
-    
-    <div class="reaction">
-        <div class="emoji">😍</div>
-        <div class="text">in love</div>
-        <div class="count">94</div>
-    </div>  
-      
-    <div class="reaction">
-        <div class="emoji">😮</div>
-        <div class="text">shocked</div>
-        <div class="count">5</div>
-    </div>
-    
-    <div class="reaction">
-        <div class="emoji">😠</div>
-        <div class="text">angry</div>
-        <div class="count">17</div>
-    </div>
-    
-    <div class="reaction">
-        <div class="emoji">😢</div>
-        <div class="text">sad</div>
-        <div class="count">0</div>
-    </div>
-    
-    <div class="settings">
-        <strong>Share buttons:</strong>
-        <input type="radio" name="settings" value="popup" id="popup" checked><label for="popup">Popup</label>
-        <input type="radio" name="settings" value="tooltip" id="tooltip"><label for="tooltip">Tooltip</label>
-        <input type="radio" name="settings" value="none" id="none"><label for="none">None</label>
-    </div>
-    </div>
-    </div>
-    
-    <div class="hidden" id="modal">
-        <a class="fa fa-close" onclick="closeModal()"></a>
-        <h2>Share your feelings!</h2>
-        <h3 id="modalcontent">Let your friends know what you think.</h3>
-        
-        <div class="social">
-            <a class="fa fa-facebook" href="https://www.facebook.com/sharer.php?u=https://codepen.io/inesmontani/full/XmzeYr&t=Reaction emojis with social sharing & animation" target="_blank"></a>
-            <a class="fa fa-twitter" href="https://twitter.com/share?text=Reaction emojis with social sharing & animation &url=https://codepen.io/inesmontani/full/XmzeYr&via=_inesmontani" target="_blank"></a>
-            <a class="fa fa-tumblr" href="https://www.tumblr.com/share/link?url=https://codepen.io/inesmontani/full/XmzeYr" target="_blank"></a>
-        </div>
-    </div>
+	<link rel="preconnect"
+		href=
+"https://fonts.gstatic.com">
+	<link href=
+"https://fonts.googleapis.com/css2?family=Amiri&family=Lobster&family=Pacifico&display=swap"
+		rel="stylesheet">
+	<!-- linking style.css file-->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	
+		 
+	<!-- Currency Converter -->
+	<h1 class="heading text-center display-2">
+		
+                                            Валют хөрвүүлэгч
+	</h1>
+	<hr>
+	<div class="container">
+		<div class="main">
+			<div class="form-group">
+				<label for="oamount">
+				
+						  <tr>
+					
+					<table class="Currency" > 
+						
+						<input type="text" class="form-control searchBox" placeholder="0.00" id="oamount">
+							
+						    <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+						
+						 <div class="row">
+						    <!-- clearScreen() function clears all the values -->
+						    <td> <input type="button" value="Cancel" onclick="clearScreen()" id="btn" /> </td>
+						  </tr>
+						  <tr>
+						    <!-- display() function displays the value of clicked button -->
+						
+						    <td> <input type="button" value="1" onclick="display('1')" /> </td>
+						    <td> <input type="button" value="2" onclick="display('2')" /> </td>
+						    <td> <input type="button" value="3" onclick="display('3')" /> </td>
+						  
+						  </tr>
+						  <tr>
+						    <td> <input type="button" value="4" onclick="display('4')" /> </td>
+						    <td> <input type="button" value="5" onclick="display('5')" /> </td>
+						    <td> <input type="button" value="6" onclick="display('6')" /> </td>
+						    
+						  </tr>
+						  <tr>
+						    <td> <input type="button" value="7" onclick="display('7')" /> </td>
+						    <td> <input type="button" value="8" onclick="display('8')" /> </td>
+						    <td> <input type="button" value="9" onclick="display('9')" /> </td>
+						    
+						  </tr>
+						  <tr>
+						    <td> <input type="button" value="." onclick="display('.')" /> </td>
+						    <td> <input type="button" value="0" onclick="display('0')" /> </td>
+						
+						 
+						    
+						
+						<select class="form-control from" id="sel1">
+							<option value="">нэгийг нь сонго…</option>
+							<option value="USD">USD</option>
+							<option value="AED">AED</option>
+							<option value="ARS">ARS</option>
+							<option value="AUD">AUD</option>
+							<option value="BGN">BGN</option>
+							<option value="BRL">BRL</option>
+							<option value="BSD">BSD</option>
+							<option value="CAD">CAD</option>
+							<option value="CHF">CHF</option>
+							<option value="CLP">CLP</option>
+							<option value="CNY">CNY</option>
+							<option value="COP">COP</option>
+							<option value="CZK">CZK</option>
+							<option value="DKK">DKK</option>
+							<option value="DOP">DOP</option>
+							<option value="EGP">EGP</option>
+							<option value="EUR">EUR</option>
+							<option value="FJD">FJD</option>
+							<option value="GBP">GBP</option>
+							<option value="GTQ">GTQ</option>
+							<option value="HKD">HKD</option>
+							<option value="HRK">HRK</option>
+							<option value="HUF">HUF</option>
+							<option value="IDR">IDR</option>
+							<option value="ILS">ILS</option>
+							<option value="INR">INR</option>
+							<option value="ISK">ISK</option>
+							<option value="JPY">JPY</option>
+							<option value="KRW">KRW</option>
+							<option value="KZT">KZT</option>
+							<option value="MVR">MVR</option>
+							<option value="MXN">MXN</option>
+							<option value="MYR">MYR</option>
+							<option value="NOK">NOK</option>
+							<option value="NZD">NZD</option>
+							<option value="PAB">PAB</option>
+							<option value="PEN">PEN</option>
+							<option value="PHP">PHP</option>
+							<option value="PKR">PKR</option>
+							<option value="PLN">PLN</option>
+							<option value="PYG">PYG</option>
+							<option value="RON">RON</option>
+							<option value="RUB">RUB</option>
+							<option value="SAR">SAR</option>
+							<option value="SEK">SEK</option>
+							<option value="SGD">SGD</option>
+							<option value="THB">THB</option>
+							<option value="TRY">TRY</option>
+							<option value="TWD">TWD</option>
+							<option value="UAH">UAH</option>
+							<option value="UYU">UYU</option>
+							<option value="ZAR">ZAR</option>
+						 
+					
+						  </tr>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">To</span>
+						</div>
+						<select class="form-control to" id="sel2">
+							<option value="">нэгийг нь сонго…</option>
+							<option value="USD">USD</option>
+							<option value="AED">AED</option>
+							<option value="ARS">ARS</option>
+							<option value="AUD">AUD</option>
+							<option value="BGN">BGN</option>
+							<option value="BRL">BRL</option>
+							<option value="BSD">BSD</option>
+							<option value="CAD">CAD</option>
+							<option value="CHF">CHF</option>
+							<option value="CLP">CLP</option>
+							<option value="CNY">CNY</option>
+							<option value="COP">COP</option>
+							<option value="CZK">CZK</option>
+							<option value="DKK">DKK</option>
+							<option value="DOP">DOP</option>
+							<option value="EGP">EGP</option>
+							<option value="EUR">EUR</option>
+							<option value="FJD">FJD</option>
+							<option value="GBP">GBP</option>
+							<option value="GTQ">GTQ</option>
+							<option value="HKD">HKD</option>
+							<option value="HRK">HRK</option>
+							<option value="HUF">HUF</option>
+							<option value="IDR">IDR</option>
+							<option value="ILS">ILS</option>
+							<option value="INR">INR</option>
+							<option value="ISK">ISK</option>
+							<option value="JPY">JPY</option>
+							<option value="KRW">KRW</option>
+							<option value="KZT">KZT</option>
+							<option value="MVR">MVR</option>
+							<option value="MXN">MXN</option>
+							<option value="MYR">MYR</option>
+							<option value="NOK">NOK</option>
+							<option value="NZD">NZD</option>
+							<option value="PAB">PAB</option>
+							<option value="PEN">PEN</option>
+							<option value="PHP">PHP</option>
+							<option value="PKR">PKR</option>
+							<option value="PLN">PLN</option>
+							<option value="PYG">PYG</option>
+							<option value="RON">RON</option>
+							<option value="RUB">RUB</option>
+							<option value="SAR">SAR</option>
+							<option value="SEK">SEK</option>
+							<option value="SGD">SGD</option>
+							<option value="THB">THB</option>
+							<option value="TRY">TRY</option>
+							<option value="TWD">TWD</option>
+							<option value="UAH">UAH</option>
+							<option value="UYU">UYU</option>
+							<option value="ZAR">ZAR</option>
+							
+						</table>
+					
+						</select>
+            </div>
+		</div>
+	</div>
+
+
+			<div class="text-center">
+
+				<!-- convert button -->
+				<button class="btn btn-primary convert m-2" type="submit">
+					хөрвүүлэх
+				</button>
+				<!-- reset button -->
+				<button class="btn btn-primary m-2" onclick="clearVal()">
+					Дахин тохируулах
+				</button>
+			</div>
+
+		</div>
+
+		<div id="finalAmount" class="text-center">
+
+			<!-- Display the converted amount -->
+			<h2>Хөрвүүлсэн дүн :
+				<span class="finalValue" style="color:green;">
+				</span>
+			</h2>
+		</div>
+	</div>
+
+
+	<!-- linking script.js file -->
+	<script src="script.js"></script>
+	<script src="cal.js"></script>
+</body>
+</html>
+
