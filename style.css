@@ -1,0 +1,47 @@
+body{
+    background-color: #ffeecc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#cellContainer{
+    position: relative;
+    background-color: #999999;
+    padding: 10px;
+    display: flex;
+    width: 280px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+
+      .hourglass::after {
+        content: '⏳';
+        --emoji: '⌛️';
+        animation-name: twoFrames;
+        animation-duration: 1.2s;
+    }
+}
+.cell{
+    width: 50px;
+    height: 50px;
+    background-color: palevioletred;
+    margin: 10px;
+    border-radius: 5px;
+}
+.cube{
+    width: 50px;
+    height: 50px;
+    background-color: #ffcc00;
+    margin: 10px;
+    border-radius: 5px;
+    position: absolute;
+    left: 80px;
+    top: 150px;
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: all 0.3 ease-in;}
+
